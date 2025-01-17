@@ -4,16 +4,16 @@ import { OrderModel } from '../models/order.js';
 dotenv.config();
 
 // PayPal environment setup
-// const environment = new paypal.core.LiveEnvironment(
-//   process.env.PAYPAL_CLIENT_ID,
-//   process.env.PAYPAL_CLIENT_SECRET
-// );
-// const client = new paypal.core.PayPalHttpClient(environment);
-const environment = new paypal.core.SandboxEnvironment(
+const environment = new paypal.core.LiveEnvironment(
   process.env.PAYPAL_CLIENT_ID,
   process.env.PAYPAL_CLIENT_SECRET
 );
 const client = new paypal.core.PayPalHttpClient(environment);
+// const environment = new paypal.core.SandboxEnvironment(
+//   process.env.PAYPAL_CLIENT_ID,
+//   process.env.PAYPAL_CLIENT_SECRET
+// );
+// const client = new paypal.core.PayPalHttpClient(environment);
 
 // Create Payment
 export const createPayment = async (req, res) => {
