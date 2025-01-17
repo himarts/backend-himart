@@ -50,8 +50,8 @@ export const createPayment = async (req, res) => {
         },
       ],
       application_context: {
-        return_url: 'http://localhost:3000/checkout-success',
-        cancel_url: 'http://localhost:3000/cancel',
+        return_url: 'https://frontend-himart.onrender.com/checkout-success',
+        cancel_url: 'https://frontend-himart.onrender.com/cancel',
         user_action: 'PAY_NOW',
       
       },
